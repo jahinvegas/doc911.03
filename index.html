@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOC911 Zone | Futuristic Universal Rap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(120deg, #000000, #0a0a23, #111144);
+      color: #00ffee;
+      animation: bgShift 20s infinite alternate;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 8px #00f6ff, 0 0 12px #00f6ff; transform: scale(1); }
+      50% { text-shadow: 0 0 20px #00f6ff, 0 0 30px #00ffee; transform: scale(1.05); }
+      100% { text-shadow: 0 0 8px #00f6ff, 0 0 12px #00f6ff; transform: scale(1); }
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(0, 255, 255, 0.05);
+    }
+
+    header h1 {
+      font-size: 4em;
+      color: #ffffff;
+      animation: pulseGlow 3s infinite ease-in-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 255, 255, 0.1);
+      border-top: 2px solid #00ffee;
+      border-bottom: 2px solid #00ffee;
+    }
+
+    nav a {
+      padding: 16px 28px;
+      color: #00ffee;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #00ffee;
+      color: #000;
+      text-shadow: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00ffee;
+    }
+
+    .video-container iframe,
+    .music-container iframe {
+      width: 80%;
+      max-width: 720px;
+      height: 400px;
+      margin: 20px auto;
+      border: 3px solid #00ffee;
+      box-shadow: 0 0 20px #00ffee;
+    }
+
+    .nft-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .nft-gallery img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border: 3px solid #00ffee;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: rgba(0, 255, 255, 0.05);
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚨 DOC911 ZONE 🚨</h1>
+    <p>Transmitting Universal Frequencies Since 7022</p>
+  </header>
+
+  <nav>
+    <a href="#videos">🎥 Videos</a>
+    <a href="#music">🎧 Music</a>
+    <a href="#nfts">🖼️ NFT Gallery</a>
+  </nav>
+
+  <section id="videos">
+    <h2>Featured Transmissions</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/5ypg0UJI8DY" title="Hip No TizeD"></iframe>
+      <iframe src="https://www.youtube.com/embed/JOzgaVoQro4" title="Never Underestimate"></iframe>
+      <iframe src="https://www.youtube.com/embed/u2-dhBXnO5M" title="Professor Quirky"></iframe>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Broadcasted Soundwaves</h2>
+    <div class="music-container">
+      <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/16515203&color=%230066cc&auto_play=false"
+        title="SoundCloud Track 1"></iframe>
+      <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/15891763&color=%230066cc&auto_play=false"
+        title="SoundCloud Track 2"></iframe>
+    </div>
+  </section>
+
+  <section id="nfts">
+    <h2>Encoded Visual Archives</h2>
+    <div class="nft-gallery">
+      <img src="https://via.placeholder.com/220x220?text=NFT+001" alt="NFT 001">
+      <img src="https://via.placeholder.com/220x220?text=NFT+002" alt="NFT 002">
+      <img src="https://via.placeholder.com/220x220?text=NFT+003" alt="NFT 003">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 7025 DOC911 - Powered by Intergalactic Bass & 100% Certified Rhymes
+  </footer>
+
+</body>
+</html>
