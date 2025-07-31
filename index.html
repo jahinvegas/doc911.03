@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,28 @@
       overflow-x: hidden;
       position: relative;
     }
-
+    .loader-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader {
+      border: 6px solid #00ffee;
+      border-top: 6px solid #000;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     .stars {
       position: fixed;
       width: 100%;
@@ -23,23 +43,19 @@
       animation: moveStars 200s linear infinite;
       z-index: -1;
     }
-
     @keyframes moveStars {
       from { background-position: 0 0; }
-      to { background-position: 10000px 10000px; }
+      to   { background-position: 10000px 10000px; }
     }
-
     header {
       text-align: center;
       padding: 50px 20px;
       animation: glow 2s infinite alternate;
     }
-
     @keyframes glow {
       from { text-shadow: 0 0 10px #00f6ff; }
-      to { text-shadow: 0 0 30px #00ffee; }
+      to   { text-shadow: 0 0 30px #00ffee; }
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -47,24 +63,20 @@
       border-top: 2px solid #00ffee;
       border-bottom: 2px solid #00ffee;
     }
-
     nav a {
       padding: 16px 24px;
       color: #00ffee;
       text-decoration: none;
       transition: 0.3s;
     }
-
     nav a:hover {
       background-color: #00ffee;
       color: #000;
     }
-
     section {
       padding: 60px 20px;
       text-align: center;
     }
-
     iframe {
       width: 80%;
       max-width: 720px;
@@ -73,14 +85,12 @@
       box-shadow: 0 0 20px #00ffee;
       margin: 20px 0;
     }
-
     .nft-gallery {
       display: flex;
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
     }
-
     .nft-gallery img {
       width: 220px;
       height: 220px;
@@ -88,7 +98,6 @@
       border-radius: 12px;
       box-shadow: 0 0 20px #00ffee;
     }
-
     footer {
       text-align: center;
       padding: 30px;
@@ -98,7 +107,14 @@
     }
   </style>
 </head>
-<body>
+<body onload="startPage()">
+
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <audio id="intro-audio" src="sound.mp3" preload="auto"></audio>
+
   <div class="stars"></div>
 
   <header>
@@ -107,28 +123,25 @@
   </header>
 
   <nav>
-    <a href="#videos">🎥 Videos</a>
-    <a href="#playlist">📺 Playlist</a>
-    <a href="#music">🎧 Music</a>
+    <a href="#playlist-main">📺 Playlist</a>
+    <a href="#playlist-doc911">🚀 DOC911</a>
+    <a href="#playlist-new">🔥 New Shit</a>
     <a href="#nfts">🖼️ NFTs</a>
   </nav>
 
-  <section id="videos">
-    <h2>Featured Videos</h2>
-    <iframe src="https://www.youtube.com/embed/5ypg0UJI8DY"></iframe>
-    <iframe src="https://www.youtube.com/embed/JOzgaVoQro4"></iframe>
-    <iframe src="https://www.youtube.com/embed/u2-dhBXnO5M"></iframe>
-  </section>
-
-  <section id="playlist">
+  <section id="playlist-main">
     <h2>Full Playlist</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrYD4SJlktuJXR1-2Ks1RhtWbWtmhEo-D"></iframe>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLrYD4SJlktuJXR1-2Ks1RhtWbWtmhEo-D" allowfullscreen></iframe>
   </section>
 
-  <section id="music">
-    <h2>Broadcasted Soundwaves</h2>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/16515203"></iframe>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/15891763"></iframe>
+  <section id="playlist-doc911">
+    <h2>Playlist: DOC911</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_DOC911_PLAYLIST_ID" allowfullscreen></iframe>
+  </section>
+
+  <section id="playlist-new">
+    <h2>Playlist: New Shit</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_NEW_SHIT_PLAYLIST_ID" allowfullscreen></iframe>
   </section>
 
   <section id="nfts">
@@ -143,5 +156,12 @@
   <footer>
     &copy; 7025 DOC911 - Cosmic Rights Reserved
   </footer>
+
+  <script>
+    function startPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("intro-audio").play();
+    }
+  </script>
 </body>
 </html>
